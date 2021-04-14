@@ -1,0 +1,31 @@
+package assign;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class LocalDateLocalDateTimeMethods {
+
+	public static void main(String[] args) {
+		LocalDate d1 = LocalDate.now();
+		System.out.println("Today's date " + d1);
+
+		LocalDate d2 = LocalDate.of(1997, 06, 30);
+		System.out.println("Given date " + d2);
+
+		LocalDate d3 = LocalDate.parse("1997-10-14", DateTimeFormatter.ISO_DATE);
+		System.out.println("Date Formatter " + d3);
+
+		LocalDateTime dt1 = LocalDateTime.now();
+		System.out.println("Today's date & time " + dt1);
+
+		LocalDateTime dt2 = LocalDateTime.of(1997, 06, 30, 06, 00);
+		System.out.println("Adding days to the given date & time " + dt2.plusDays(14).plusMonths(3));
+
+		LocalDateTime dt3 = LocalDateTime.of(1997, 06, 30, 06, 00);
+		System.out.println("Adding months to the given date & time " + dt3.plusMonths(4));
+
+		LocalDateTime dt4 = LocalDateTime.parse("1997-07-30T06:00", DateTimeFormatter.ISO_DATE_TIME);
+		System.out.println("Date Time Formatter " + dt4);
+	}
+}
